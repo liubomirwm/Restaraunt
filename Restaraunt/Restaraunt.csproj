@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73B3D639-C88A-4450-B9ED-76FA70EA4470}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Restaraunt</RootNamespace>
+    <AssemblyName>Restaraunt</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CondimentButton.cs" />
+    <Compile Include="CondimentDecorators\CapersDecorator.cs" />
+    <Compile Include="CondimentDecorators\CheeseDecorator.cs" />
+    <Compile Include="CondimentDecorators\ChocolateDecorator.cs" />
+    <Compile Include="CondimentDecorators\CokeDecorator.cs" />
+    <Compile Include="CondimentDecorators\CreamDecorator.cs" />
+    <Compile Include="CondimentDecorators\Decorator.cs" />
+    <Compile Include="CondimentDecorators\GinDecorator.cs" />
+    <Compile Include="Products\Seafoods\GreekMussels.cs" />
+    <Compile Include="CondimentDecorators\HoneyDecorator.cs" />
+    <Compile Include="CondimentDecorators\HummusDecorator.cs" />
+    <Compile Include="CondimentDecorators\IceCreamDecorator.cs" />
+    <Compile Include="CondimentDecorators\KetchupDecorator.cs" />
+    <Compile Include="CondimentDecorators\OliveOilDecorator.cs" />
+    <Compile Include="CondimentDecorators\OrangeDecorator.cs" />
+    <Compile Include="CondimentDecorators\OreoDecorator.cs" />
+    <Compile Include="CondimentDecorators\PestoDecorator.cs" />
+    <Compile Include="CondimentDecorators\RiceDecorator.cs" />
+    <Compile Include="CondimentDecorators\SalsaDecorator.cs" />
+    <Compile Include="CondimentDecorators\SaltDecorator.cs" />
+    <Compile Include="CondimentDecorators\SodaDecorator.cs" />
+    <Compile Include="CondimentDecorators\SpriteDecorator.cs" />
+    <Compile Include="CondimentDecorators\SugarDecorator.cs" />
+    <Compile Include="CondimentDecorators\TonicDecorator.cs" />
+    <Compile Include="CondimentDecorators\VinegarDecorator.cs" />
+    <Compile Include="CondimentDecorators\ZucchiniDecorator.cs" />
+    <Compile Include="IProductFactory.cs" />
+    <Compile Include="CondimentDecorators\ChilliDecorator.cs" />
+    <Compile Include="Products\Drinks\Ellinikos.cs" />
+    <Compile Include="Products\Drinks\Frappe.cs" />
+    <Compile Include="Products\Drinks\Retsina.cs" />
+    <Compile Include="Products\Seafoods\GreekCod.cs" />
+    <Compile Include="Products\Seafoods\LobsterPasta.cs" />
+    <Compile Include="Products\Seafoods\Seafood.cs" />
+    <Compile Include="Products\Sweets\Bougatsa.cs" />
+    <Compile Include="Products\Drinks\Campari.cs" />
+    <Compile Include="Products\Drinks\Drink.cs" />
+    <Compile Include="Products\Pastas\CapreseLasagna.cs" />
+    <Compile Include="Products\Pastas\Pasta.cs" />
+    <Compile Include="Products\Pizzas\Capricciosa.cs" />
+    <Compile Include="Products\Pizzas\Pizza.cs" />
+    <Compile Include="Products\Soups\ChickenParmSoup.cs" />
+    <Compile Include="Products\Drinks\Lavazza.cs" />
+    <Compile Include="Products\Pizzas\Margherita.cs" />
+    <Compile Include="Products\Pizzas\Marinara.cs" />
+    <Compile Include="Products\Soups\SausageAndWhiteBeanSoup.cs" />
+    <Compile Include="Products\Pastas\SpaghettiAndMeatballs.cs" />
+    <Compile Include="Products\Pastas\TomatoButterSpaghetti.cs" />
+    <Compile Include="Products\Soups\Soup.cs" />
+    <Compile Include="Products\Soups\TuscanTortelliniSoup.cs" />
+    <Compile Include="Products\Drinks\Vermouth.cs" />
+    <Compile Include="Products\Sweets\Baklava.cs" />
+    <Compile Include="Products\Sweets\Sweets.cs" />
+    <Compile Include="StateName.cs" />
+    <Compile Include="IState.cs" />
+    <Compile Include="States\GreekState.cs" />
+    <Compile Include="States\ItalianState.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="StateFactory.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
